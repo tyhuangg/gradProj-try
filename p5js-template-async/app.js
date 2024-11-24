@@ -73,4 +73,15 @@ function generateTimeTable() {
             <th>Detail</th>
         </tr>`;
     timeData.forEach((item) => {
-        html += 
+        html += `<tr>
+            <td>${item.time}</td>
+            <td>${item.type}</td>
+            <td><button class="detail-btn">Detail</button></td>
+        </tr>`;
+    });
+    html += `</table>`;
+    return html;
+}
+
+// Initial render
+showAttackType();
