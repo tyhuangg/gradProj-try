@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg950\cocoartf2818
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #timeline\
+\
+<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Timeline Visualization</title>\
+    <link href="https://unpkg.com/vis-timeline/dist/vis-timeline-graph2d.min.css" rel="stylesheet">\
+    <script src="https://unpkg.com/vis-timeline/dist/vis-timeline-graph2d.min.js"></script>\
+</head>\
+<body>\
+    <div id="timeline" style="height: 300px;"></div>\
+    <script>\
+        // Data for timeline\
+        const items = new vis.DataSet([\
+            \{ id: 1, content: 'cowrie.session.connect', start: '2024-02-09' \},\
+            \{ id: 2, content: 'cowrie.session.params', start: '2024-04-20' \},\
+            \{ id: 3, content: 'cowrie.direct-tcpip.data', start: '2024-06-24' \},\
+            \{ id: 4, content: 'cowrie.client.kex', start: '2024-11-30' \}\
+        ]);\
+\
+        // Configuration for the Timeline\
+        const options = \{\
+            width: '100%',\
+            height: '300px',\
+            editable: false,\
+            stack: true\
+        \};\
+\
+        // Create Timeline\
+        const timeline = new vis.Timeline(document.getElementById('timeline'), items, options);\
+    </script>\
+</body>\
+</html>\
+}
